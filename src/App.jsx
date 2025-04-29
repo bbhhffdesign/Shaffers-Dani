@@ -16,9 +16,9 @@ function App() {
     <div className="app">
       <div className="sections" ref={wrapperRef} >
         <Hero />
-        <SecondPage />
-        <ThirdPage />
-        <LoadingPage />
+        <SecondPage currentSection={currentSection} />
+        <ThirdPage currentSection={currentSection}/>
+        <LoadingPage currentSection={currentSection}/>
       </div>
     </div>
   );
