@@ -1,0 +1,145 @@
+@use "../abstractas/variables" as *;
+
+.hero {
+  background: none;
+}
+.hero-content {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .discount-code-container {
+    padding: 0 1rem;
+    // padding-top: 0rem;
+    height: 30svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    .discount-text-container{
+      width: 100%;
+
+
+      h3,
+      h5,
+      h4{
+        text-align: center;
+        margin: 0;
+        font-weight: 800;
+    }
+    .price-text{
+      animation: price 2s steps(1, end) infinite;
+    }
+
+    .daniel-te-regala{
+      margin-top: 1rem;
+      height: 3rem;
+      width: 100%;
+      background-image: url(./assets/svg/dani-te-regala.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+    }
+  
+
+    .discount-code {
+      margin: 0;
+      margin-bottom: .5rem;
+      padding: clamp(0.5rem, -0.4rem + 4vw, 0.8rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      h1 {
+        // background-color: red;
+        line-height: 100%;
+        margin: 0 1rem;
+        width: 70vw;
+        // min-width: 100%;
+        font-size: clamp(2rem, -4.923rem + 30.769vw, 3rem);
+      }
+      small {
+        font-size: 0.8rem;
+        line-height: 90%;
+      }
+    }
+  }
+
+  .dani-container {
+    // height: 45vh;
+    height: 55svh;
+    width: 100vw;
+    background-image: url(./assets/svg/dani.webp);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    flex: 1;
+    // transition: transform 0.5s ease-in-out;
+    // // transform: translateX(0); // posición original
+
+    // &.animate-dani {
+    //   transform: translateY(-50%); // o lo que quieras mover
+    // }
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .dani-container.animated {
+    transform: translateY(-200px);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .dani-globo{
+    position: absolute;
+    background-image: url(./assets/svg/dani-globo.webp);
+    transform-origin: top top;
+    animation: alertaRotatoria 3.5s ease-in-out infinite reverse;
+
+  
+  }
+  .button-container {
+    // height: 25vh;
+    height: 15svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // background-color: $color-principal;
+  }
+}
+
+
+
+@keyframes alertaRotatoria {
+  0%   { transform: rotate(0deg); }
+  3%  { transform: rotate(.5deg); }
+  6%  { transform: rotate(-.5deg); }
+  9%  { transform: rotate(.75deg); }
+  12%  { transform: rotate(-.75deg); }
+  15%  { transform: rotate(.5deg); }
+  18%  { transform: rotate(-.5deg); }
+  21%  { transform: rotate(1deg); }
+  24%  { transform: rotate(-1deg); }
+  27%  { transform: rotate(.5deg); }
+  30%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); } /* del 50% al 100% está quieto */
+}
+// #4E3718" : "#EFA52E"
+@keyframes price{
+  0% {
+    color: #EFA52E;
+  }
+  50% {
+    color: #4E3718;
+  }
+  100% {
+    color: #EFA52E;
+  }
+}

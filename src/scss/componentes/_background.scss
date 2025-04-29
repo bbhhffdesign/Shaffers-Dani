@@ -1,0 +1,77 @@
+@use "../abstractas/variables" as *;
+
+.background {
+    position: absolute;
+    top: 0;
+    height: 100dvh;
+    width: 100%;
+
+  }
+  
+  
+  
+  .wave {
+    position: absolute;
+    bottom: 0;
+    width: 200lvw;
+    bottom: 0;
+    height: 11rem;
+    @include dev-xs {
+    }
+    @include dev-sm {
+      // height: 12rem;
+    }
+    @include dev-md {
+      // height: 15rem;
+    }
+    @include dev-lg {
+      // height: 20rem;
+      // height: 18rem; 
+    }
+  }
+  
+  .wave-1 {
+    background: url(./assets/wave-1.webp) repeat-x;
+    background-size: 100lvw 100%;
+    animation: wave-1 12s infinite linear;
+    z-index: 1;
+  }
+  .wave-2 {
+    background: url(./assets/wave-2.webp) repeat-x;
+    bottom: 10%;
+    background-size: 100lvw 100%;
+    animation: wave-1 30s infinite linear backwards;
+    // transform: translateY(5rem);
+    // z-index: 2;
+    // transform: rotate(45deg);
+  }
+  // .wave-1,
+  // .wave-2 {
+  //   // transition: bottom 0.6s ease-in-out;
+  // }
+  .wave-2-bottom{
+    bottom: -10%;
+    // background: red;
+    // bottom: -6rem;
+    // bottom: -8rem;
+    animation: wave-1 12s infinite linear;
+  }
+
+  
+  @keyframes wave-1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+  
+  @keyframes wave-2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }

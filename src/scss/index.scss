@@ -1,0 +1,9 @@
+@use "./abstractas/variables" as *;
+@use "./abstractas/globales";
+@use "./abstractas/normalize";
+@use  "./componentes/buttons";
+@use  "./componentes/background";
+@use  "./secciones/main-section";
+@use  "./secciones/terms-page";
+@use  "./secciones/third-page";
+@use  "./secciones/loading-page";
