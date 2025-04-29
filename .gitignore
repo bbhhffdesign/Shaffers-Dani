@@ -12,7 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
-proyecto.zip
+
 
 # Editor directories and files
 .vscode/*
