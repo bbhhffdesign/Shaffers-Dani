@@ -577,6 +577,14 @@ button:active {
   top: 0;
   height: 100dvh;
   width: 100%;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+
+.bg-animate {
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
 }
 
 .wave {
@@ -600,6 +608,7 @@ button:active {
   background-size: 100lvw 100%;
   -webkit-animation: wave-1 30s infinite linear backwards;
           animation: wave-1 30s infinite linear backwards;
+  z-index: 0;
 }
 
 .wave-2-bottom {
