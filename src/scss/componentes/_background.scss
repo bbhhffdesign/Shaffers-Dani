@@ -34,12 +34,6 @@
     }
   }
   
-  .wave-1 {
-    background: url(./assets/wave-1.webp) repeat-x;
-    background-size: 100lvw 100%;
-    animation: wave-1 12s infinite linear;
-    z-index: 1;
-  }
   .wave-2 {
     background: url(./assets/wave-2.webp) repeat-x;
     bottom: 10%;
@@ -48,6 +42,12 @@
     // transform: translateY(5rem);
     z-index: 0;
     // transform: rotate(45deg);
+  }
+  .wave-1 {
+    background: url(./assets/wave-1.webp) repeat-x;
+    background-size: 100lvw 100%;
+    animation: wave-1 12s infinite linear;
+    z-index: 1;
   }
   // .wave-1,
   // .wave-2 {

@@ -594,21 +594,21 @@ button:active {
   bottom: 0;
   height: 11rem;
 }
-.wave-1 {
-  background: url(./assets/wave-1.webp) repeat-x;
-  background-size: 100lvw 100%;
-  -webkit-animation: wave-1 12s infinite linear;
-          animation: wave-1 12s infinite linear;
-  z-index: 1;
-}
-
 .wave-2 {
   background: url(./assets/wave-2.webp) repeat-x;
   bottom: 10%;
   background-size: 100lvw 100%;
   -webkit-animation: wave-1 30s infinite linear backwards;
           animation: wave-1 30s infinite linear backwards;
-  z-index: 0;
+  z-index: -1;
+}
+
+.wave-1 {
+  background: url(./assets/wave-1.webp) repeat-x;
+  background-size: 100lvw 100%;
+  -webkit-animation: wave-1 12s infinite linear;
+          animation: wave-1 12s infinite linear;
+  z-index: 1;
 }
 
 .wave-2-bottom {
@@ -732,20 +732,21 @@ button:active {
   line-height: 90%;
 }
 .hero-content .dani-container {
+  position: relative;
   height: 55svh;
   width: 100vw;
-  background-image: url(./assets/svg/dani.webp);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 0;
   -ms-flex: 1;
       flex: 1;
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
-.hero-content .dani-container.animated {
+.hero-content .dani-container img {
+  height: 380px;
+  width: 360px;
+}
+.hero-content .dani-container.animate {
   -webkit-transform: translateY(-200px);
           transform: translateY(-200px);
   transition: -webkit-transform 0.6s ease-in-out;
@@ -754,7 +755,7 @@ button:active {
 }
 .hero-content .dani-globo {
   position: absolute;
-  background-image: url(./assets/svg/dani-globo.webp);
+  bottom: 0;
   -webkit-transform-origin: top top;
           transform-origin: top top;
   animation: alertaRotatoria 3.5s ease-in-out infinite reverse;

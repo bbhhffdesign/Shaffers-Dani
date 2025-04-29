@@ -72,32 +72,33 @@
   }
 
   .dani-container {
+    position: relative;
     // height: 45vh;
     height: 55svh;
     width: 100vw;
-    background-image: url(./assets/svg/dani.webp);
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 1;
+    // background-image: url(./assets/svg/dani.webp);
+    // background-size: contain;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    z-index: 0;
     flex: 1;
-    // transition: transform 0.5s ease-in-out;
-    // // transform: translateX(0); // posición original
-
-    // &.animate-dani {
-    //   transform: translateY(-50%); // o lo que quieras mover
-    // }
     transition: transform 0.6s ease-in-out;
+
+    img{
+      height: 380px;
+      width: 360px;
+    }
   }
 
-  .dani-container.animated {
+  .dani-container.animate {
     transform: translateY(-200px);
     transition: transform 0.6s ease-in-out;
   }
 
   .dani-globo{
     position: absolute;
-    background-image: url(./assets/svg/dani-globo.webp);
+    bottom: 0;
+    // background-image: url(./assets/svg/dani-globo.webp);
     transform-origin: top top;
     animation: alertaRotatoria 3.5s ease-in-out infinite reverse;
 
