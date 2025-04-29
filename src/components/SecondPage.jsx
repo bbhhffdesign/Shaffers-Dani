@@ -2,12 +2,7 @@ import { useEffect } from "react";
 import instagram from "../assets/instagram.png";
 import { Background } from "./Background";
 
-function SecondPage({currentSection}) {
-  useEffect(() => {
-    if (currentSection === 1) {  // 1 porque es la segunda página
-      console.log("Animar elementos de SecondPage!");
-    }
-  }, [currentSection]);
+function SecondPage() {
 
   return (
     <section className="section second-page">

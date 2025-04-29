@@ -1,19 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Background } from "./Background";
-import Button from "./Button";
+// import Button from "./Button";
 
 function MainPage({currentSection, isLeaving}) {
   const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    if (isLeaving && currentSection === 0) {
-      // El Hero está siendo dejado
-      // document.querySelector(".elemento-que-quiero").classList.add("animar-salida");
-      console.log("yendose");
-      // console.log(animate);
-      setAnimate(animate => !animate);
-    }
-  }, [isLeaving, currentSection]);
 
   return (
     <section className="section hero">
